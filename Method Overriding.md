@@ -1,32 +1,45 @@
-Method Overriding-Fish and Shark Class Inheritance in Python
-🧠 AIM:
-To write a Python program that demonstrates class inheritance by creating a parent class Fish with a method type, and a child class Shark that overrides the type method.
+## Methoud Overridding
 
-📋 ALGORITHM:
-Define the Fish class with a method named type() that prints "fish".
-Define the Shark class as a subclass of Fish, and override the type() method to print "shark".
-Create an instance of the Fish class named obj_goldfish.
-Create an instance of the Shark class named obj_hammerhead.
-Use a for loop to iterate over both objects.
-Within the loop, call the type() method using the loop variable.
-Output will demonstrate method overriding: printing "fish" and "shark" accordingly.
-💻 PROGRAM:
-class Fish:
-    def water(self):
-        print("fish")
-       
+## 🎯 AIM
 
-class Shark:
-    def water(self):
-        print("shark")
-	
+To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
 
-obj_goldfish=Fish()
-obj_hammerhead=Shark()
+---
 
-obj_goldfish.water()
-obj_hammerhead.water()
-OUTPUT
-image
-RESULT
+## 🧠 ALGORITHM
+
+1. **Create Class `A`**:
+   - Define the `__init__()` method to initialize the object with a value `a`.
+
+2. **Overload the `<` Operator**:
+   - Define the `__lt__()` method with logic:
+     - If `self.a < o.a`, return `"ob1 is less than ob2"`
+     - Else, return `"ob2 is less than ob1"`
+
+3. **Create Objects**:
+   - Instantiate two objects `ob1` and `ob2` with values.
+
+4. **Use `<` Operator**:
+   - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
+
+---
+
+## 💻 Program
+~~~
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if(self.a<other.a):
+            return "ob1 is less than ob2"
+        else:
+            return "ob2 is less than ob1"
+ob1 = A(20)
+ob2 = A(3)
+print(ob1 < ob2)
+~~~
+## Output
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/0a55945a-397a-445d-ac59-253d5207fecd" />
+
+## Result
 Thus, the program has been executed successfully.
