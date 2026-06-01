@@ -23,7 +23,24 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
 ---
 
 ## 💻 Program
+```
+class Robot(object):
+   def __init__(self):
+      self.__version = 22
 
+   def getVersion(self):
+       return self.__version
+
+   def setVersion(self, version):
+      self.__version = version
+
+obj = Robot()
+print(obj.getVersion())
+obj.setVersion(23)
+print(obj.getVersion())
+```
 ## Output
+<img width="699" height="306" alt="image" src="https://github.com/user-attachments/assets/aaaab266-ffeb-41b5-8bce-40715f44efd4" />
 
 ## Result
+Thus, the program has been executed successfully.
